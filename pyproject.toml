@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python-import-library"
+version = "0.1.0"
+description = "Basic application to demonstrate import of a library from a private repository"
+authors = ["alanb-2"]
+license = "Apache License 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyyaml-parser = "^0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "nexus"
+url = "http://localhost:30081/repository/pypi-group/simple"
+default = true
